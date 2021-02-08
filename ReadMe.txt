@@ -16,4 +16,9 @@
 更新实体类
 添加乐观锁注解
 配置
+实现方式，表加version字段，每次增删改判断旧version值，更改时同时插入新的version（oldVersion+1）
+实体类增加version字段，并注解mybais的@version
+在mybatis配置类中增加乐观锁拦截器配置
+10，mybatis分页，在mybatis配置类配置
+11，用mybatis的baseMapper CRUD
 
