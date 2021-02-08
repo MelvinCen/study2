@@ -21,4 +21,7 @@
 在mybatis配置类中增加乐观锁拦截器配置
 10，mybatis分页，在mybatis配置类配置
 11，用mybatis的baseMapper CRUD
+12，逻辑删除
+并不是物理删除，依旧在数据库，只是增加了一个deleted字段并标记为删除值
+新版本是配置文件+注解
 

@@ -1,5 +1,6 @@
 package com.melvin.config;
 
+import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
@@ -14,11 +15,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @Configuration
 public class MyBatisConfig {
+    //乐观锁
     @Bean
     public OptimisticLockerInterceptor optimisticLockerInnerInterceptor(){
         return new OptimisticLockerInterceptor();
     }
-
+    //分页插件
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();

@@ -93,7 +93,7 @@ class MybatisPlusApplicationTests {
     //测试分页查询
     @Test
     public void testPage(){
-        Page<User> page = new Page<>(2,5);
+        Page<User> page = new Page<>(1,10);
 
         userMapper.selectPage(page, null);
         page.getRecords().forEach(System.out::println);
@@ -102,7 +102,7 @@ class MybatisPlusApplicationTests {
     @Test
     public void testDeleteUserById(){
 
-        int result = userMapper.deleteById(1356956575250403330L);
+        int result = userMapper.deleteById(1356956575250403332L);
         if (result > 0) {
             System.out.println("删除成功");
         } else {
@@ -110,5 +110,7 @@ class MybatisPlusApplicationTests {
         }
 
     }
+
+
 
 }
